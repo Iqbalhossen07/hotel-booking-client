@@ -15,9 +15,7 @@ const RoomCard = ({room}) => {
                     <p className="text-xl font-semibold">price: ${Price_per_night}</p>
                     <p className="text-xl font-semibold">Review :  {review_counts}</p>
                     </div>
-                    {/* <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
-                    </div> */}
+                   
                 </div>
                 </div></Link>
         </section>

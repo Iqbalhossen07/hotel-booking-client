@@ -28,11 +28,16 @@ const ShowReview = () => {
  },[Price_per_night,reviews])
 
     return (
-        <div>
-           {
-                filterData.map(review=> <ReviewCard key={review._id} review={review}></ReviewCard>)
+        <section>
+         <div>
+         {
+             filterData.length > 0 ?   filterData.map(review=> <ReviewCard key={review._id} review={review}></ReviewCard>) : 
+             <div>
+               <h2>No Review</h2> 
+             </div>
            }
         </div>
+        </section>
     );
 };
 
