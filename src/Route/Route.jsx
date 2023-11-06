@@ -8,6 +8,7 @@ import MyBookings from "../Pages/MyBookings/MyBookings";
 import RoomsDetails from "../Pages/RoomsDetails/RoomsDetails";
 import AddBookings from "../Pages/AddBookings/AddBookings";
 import UpdateBookings from "../Pages/UpdateBookings/UpdateBookings";
+import AddReview from "../Pages/AddReview/AddReview";
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
                 element: <UpdateBookings></UpdateBookings>,
                 loader: ({params})=> fetch(`http://localhost:5000/hotelBookings/${params.id}`)
                 
+            },
+            {
+                path: "/addReview/:id",
+                element: <AddReview></AddReview>,
+                loader: ({params})=> fetch(`http://localhost:5000/hotelBookings/${params.id}`)
             }
         ]
     },

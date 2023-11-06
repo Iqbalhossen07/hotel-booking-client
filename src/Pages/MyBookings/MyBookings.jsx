@@ -176,6 +176,7 @@ const MyBookings = () => {
               <th>Image</th>
               <th>Price</th>
               <th>Date</th>
+              <th>Add Review</th>
               <th>Delete</th>
               <th>EDIT</th>
             </tr>
@@ -195,6 +196,9 @@ const MyBookings = () => {
                 </td>
                 <td>${booking.Price_per_night}</td>
                 <td>${booking.date}</td>
+                <Link to={`/addReview/${booking._id}`}>
+                <td>Add Review</td>
+                </Link>
                 <td  onClick={() => deleteButton(booking._id)} className=" text-2xl text-[#F87272]">
                   Delete
                 </td>
