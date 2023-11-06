@@ -15,7 +15,8 @@ const AddReview = () => {
         const form = e.target;
         const displayName = stateChanged?.displayName;
         const rating = form.rating.value;
-        const date = form.date.value;
+        // const date = new Date().toISOString(); // Get the current timestamp
+        const date = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" });
         const comment = form.comment.value;
         const bookings = {displayName,rating,date,comment,Price_per_night}
 
@@ -37,24 +38,7 @@ const AddReview = () => {
              })
 
         
-    
-    // fetch("http://localhost:5000/review", {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(bookings),
-    // })
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //         if (data.insertedId) {
-    //             toast.success("Added Booking successfully");
-    //         } else {
-    //             // Booking already exists, show a message to the user
-    //             toast.error("It is AllReady Booking");
-    //         }
-    //         setBookingAttempted(true);
-    //     });
+  
 };
     return (
         <section className="mt-20 ">
@@ -99,10 +83,6 @@ const AddReview = () => {
            <label className="label">
                <span className="label-text"> Comment </span>
            </label>
-           {/* <label className="input-group">
-             
-               <input type="text"  placeholder="Enter the Amount"  name="amount" className="input input-bordered w-full" />
-           </label> */}
            <textarea placeholder="Comment" name="comment" className="textarea textarea-bordered textarea-lg w-full " ></textarea>
            </div>
        </div>

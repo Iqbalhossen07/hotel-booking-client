@@ -1,7 +1,7 @@
 
 
 const ReviewCard = ({review}) => {
-    const {displayName,rating,date,comment,Price_per_night} = review
+    const {displayName,rating,date,comment} = review
     return (
         <section>
         <div className="relative flex w-full  flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
