@@ -23,22 +23,7 @@ const AddBookings = () => {
         console.log(displayName,email,date,Price_per_night,)
         setBookingSummary(bookings);
 
-    //     fetch('http://localhost:5000/hotelBookings',{
-    //         method: "POST", 
-    //         headers: {
-    //           "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(bookings),
-    //     })
-    //     .then(res=>res.json())
-    //     .then(data=>{
-    //         if(data.insertedId){
-    //             toast.success("Added Booking successfully")
-                
-    //         }
-    //         console.log(data)
-    //     })
-    // }
+    
     fetch("http://localhost:5000/hotelBookings", {
         method: "POST",
         headers: {
@@ -58,6 +43,8 @@ const AddBookings = () => {
         });
 };
     
+
+
 
     return (
         <section className="mt-20 ">
@@ -91,7 +78,7 @@ const AddBookings = () => {
        <div className="flex flex-col md:flex-row gap-6 ">
           <div className="form-control md:w-1/2">
            <label className="label">
-               <span className="label-text"> Email</span>
+               <span className="label-text">Email</span>
            </label>
            <label className="input-group">
              

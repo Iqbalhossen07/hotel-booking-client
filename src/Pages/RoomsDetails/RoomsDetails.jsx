@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import ShowReview from "../ShowReview/ShowReview";
 
 const RoomsDetails = () => {
     const loaderData = useLoaderData()
     const {_id,Room_Description,Price_per_night,Room_size,image,Special_offers} = loaderData;
-    console.log(loaderData)
+    // console.log(loaderData)
 
  // State to track whether booking has been added
  const [bookingAdded, setBookingAdded] = useState(false);
@@ -118,6 +119,8 @@ const RoomsDetails = () => {
         )}
   </div>
 </div>
+
+<ShowReview></ShowReview>
       </section>
     );
 };

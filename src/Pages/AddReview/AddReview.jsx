@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const AddReview = () => {
     const loader = useLoaderData()
+    const {Price_per_night} = loader;
+    console.log(loader)
     const {stateChanged} = useContext(AuthContext)
     // console.log(loader)
 
@@ -15,13 +17,28 @@ const AddReview = () => {
         const rating = form.rating.value;
         const date = form.date.value;
         const comment = form.comment.value;
-        // const bookings = {displayName,email,date}
+        const bookings = {displayName,rating,date,comment,Price_per_night}
 
         console.log(displayName,rating,date,comment)
         
+        fetch('http://localhost:5000/reviewBooking',{
+            method: "POST",
+                 headers: {
+                     "Content-Type": "application/json",
+                 },
+               body: JSON.stringify(bookings),
+             })
+             .then(res=>res.json())
+             .then(data=>{
+                if(data.insertedId){
+                    toast.success("Added Booking successfully");
+                    console.log(data)
+                }
+             })
 
+        
     
-    // fetch("http://localhost:5000/hotelBookings", {
+    // fetch("http://localhost:5000/review", {
     //     method: "POST",
     //     headers: {
     //         "Content-Type": "application/json",
