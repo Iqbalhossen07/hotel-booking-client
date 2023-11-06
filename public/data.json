@@ -1,0 +1,63 @@
+[
+    {
+      
+      "Room_Description": "Deluxe Suite with Ocean View",
+      "Price_per_night": 250,
+      "Room_size": "400 sq. ft",
+      "Availability": "Available",
+      "image": "https://i.ibb.co/SnKr3sV/pexels-roberto-nickson-2417842.jpg",
+      "Special_offers": "10% off for a 7-night stay",
+      "review_counts": 5
+    },
+    {
+      "id": 2,
+      "Room_Description": "Standard Double Room",
+      "Price_per_night": 120,
+      "Room_size": "300 sq. ft",
+      "Availability": "Available",
+      "image": "https://i.ibb.co/ZSN18p8/pexels-luis-zambrano-16436968.jpg",
+      "Special_offers": "Free breakfast for 2",
+      "review_counts": 4
+    },
+    {
+      "id": 3,
+      "Room_Description": "Family Suite with Garden View",
+      "Price_per_night": 320,
+      "Room_size": "600 sq. ft",
+      "Availability": "Sold Out",
+      "image": "https://i.ibb.co/4sk978H/pexels-pixabay-280239.jpg",
+      "Special_offers": "Not Available",
+      "review_counts": 8
+    },
+    {
+      "id": 4,
+      "Room_Description": "Single Economy Room",
+      "Price_per_night": 80,
+      "Room_size": "200 sq. ft",
+      "Availability": "Available",
+      "image": "https://i.ibb.co/YXNxkhR/pexels-pixabay-271643.jpg",
+      "Special_offers": "15% off for early booking",
+      "review_counts": 3
+    },
+    {
+      "id": 5,
+      "Room_Description": "Luxury Penthouse Suite",
+      "Price_per_night": 450,
+      "Room_size": "800 sq. ft",
+      "Availability": "Available",
+      "image": "https://i.ibb.co/qBz37q5/pexels-stiven-rivera-18801079.jpg",
+      "Special_offers": "Complimentary spa treatment",
+      "review_counts": 6
+    },
+    {
+      "id": 6,
+      "Room_Description": "Standard Twin Room",
+      "Price_per_night": 130,
+      "Room_size": "320 sq. ft",
+      "Availability": "Available",
+      "image": "https://i.ibb.co/dcNdpD6/pexels-andrea-davis-2873951.jpg",
+      "Special_offers": "Not Available",
+      "review_counts": 2
+    }
+  ]
+  
