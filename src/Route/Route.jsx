@@ -10,6 +10,7 @@ import AddBookings from "../Pages/AddBookings/AddBookings";
 import UpdateBookings from "../Pages/UpdateBookings/UpdateBookings";
 import AddReview from "../Pages/AddReview/AddReview";
 import ShowReview from "../Pages/ShowReview/ShowReview";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/myBookings",
-                element: <MyBookings></MyBookings>,
+                element: <PrivateRoute><MyBookings></MyBookings></PrivateRoute>,
             },
             {
                 path: "/roomsDetails/:id",
@@ -37,18 +38,18 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addBookings/:id",
-                element: <AddBookings></AddBookings>,
+                element: <PrivateRoute><AddBookings></AddBookings></PrivateRoute>,
                 loader: ({params})=> fetch(`http://localhost:5000/bookings/${params.id}`)
             },
             {
                 path: "/updateBooking/:id",
-                element: <UpdateBookings></UpdateBookings>,
+                element: <PrivateRoute><UpdateBookings></UpdateBookings></PrivateRoute>,
                 loader: ({params})=> fetch(`http://localhost:5000/hotelBookings/${params.id}`)
                 
             },
             {
                 path: "/addReview/:id",
-                element: <AddReview></AddReview>,
+                element: <PrivateRoute><AddReview></AddReview></PrivateRoute>,
                 loader: ({params})=> fetch(`http://localhost:5000/hotelBookings/${params.id}`)
             },
             {
