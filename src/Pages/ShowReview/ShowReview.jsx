@@ -41,7 +41,7 @@ const ShowReview = () => {
          {
              filterData.length > 0 ?   filterData.map(review=> <ReviewCard key={review._id} review={review}></ReviewCard>) : 
              <div>
-               <h2>No Review</h2> 
+               <h2 className="flex justify-center items-center mt-20">No Review</h2> 
              </div>
            }
         </div>

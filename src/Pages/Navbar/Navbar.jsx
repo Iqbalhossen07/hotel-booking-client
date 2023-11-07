@@ -5,6 +5,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import auth from "../../Firebase/Firebase.config";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import logo from "../../assets/logo.webp";
 
 
 const Navbar = () => {
@@ -32,8 +33,10 @@ const Navbar = () => {
     const links =  
   <div className="flex items-start justify-center gap-2 text-base flex-col  lg:flex-row ">
   <NavLink to="/"><li>Home</li></NavLink>
+  <NavLink to="/about"><li>About Us</li></NavLink>
   <NavLink to="/rooms">Rooms<li></li></NavLink>
   <NavLink to="/myBookings"><li>My Bookings</li></NavLink>
+  <NavLink to="/contact"><li>Contact</li></NavLink>
  
 
 
@@ -54,7 +57,8 @@ const Navbar = () => {
       {links}
       </ul>
     </div>
-   {/* <img className="w-28" src="https://i.ibb.co/PT0cjt1/logo.png" alt="" /> */}
+   <img className="w-12" src="https://i.ibb.co/mHqWn6h/image.png" alt="" />
+   {/* https://i.ibb.co/vw3TYpp/image.png */}
    {/* <p className="font-medium">booking</p> */}
   </div>
   <div className="navbar-center hidden lg:flex">

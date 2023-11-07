@@ -11,6 +11,8 @@ import UpdateBookings from "../Pages/UpdateBookings/UpdateBookings";
 import AddReview from "../Pages/AddReview/AddReview";
 import ShowReview from "../Pages/ShowReview/ShowReview";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import AboutPage from "../Pages/AboutPage/AboutPage";
+import Contact from "../Pages/Contact/Contact";
 
 
 const router = createBrowserRouter([
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
+            },
+            {
+                path:"/about",
+                element: <AboutPage></AboutPage>,
+            },
+            {
+                path: "/contact",
+                element:<Contact></Contact>
             },
             
             {
