@@ -3,7 +3,8 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { NavLink } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { updateProfile } from "firebase/auth";
-// import SocialIcons from "../../SocialICons/SocialICons";
+import SocialIcons from "../SocialICons/SocialICons";
+
 
 const Register = () => {
     const {createUser} = useContext(AuthContext)
@@ -109,9 +110,9 @@ const Register = () => {
                  </div>
              </div>
  
-             {/* <div className="flex justify-center mb-20 mt-5">
+             <div className="flex justify-center mb-20 mt-5">
              <SocialIcons></SocialIcons>
-           </div> */}
+           </div>
       </section>
     );
 };

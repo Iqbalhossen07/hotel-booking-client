@@ -1,5 +1,6 @@
 import ContactAccordion from "../ContactAccordion/ContactAccordion";
 import ContactAddress from "../ContactAddress/ContactAddress";
+import Footer from "../../Footer/Footer";
 
 const Contact = () => {
     return (
@@ -10,6 +11,9 @@ const Contact = () => {
 
            <div>
             <ContactAccordion></ContactAccordion>
+           </div>
+           <div>
+            <Footer></Footer>
            </div>
         </section>
     );

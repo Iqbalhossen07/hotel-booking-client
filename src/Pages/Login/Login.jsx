@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import SocialIcons from "../SocialICons/SocialICons";
 // import SocialIcons from "../../SocialICons/SocialICons";
 
 const Login = () => {
@@ -76,9 +77,9 @@ const Login = () => {
             </div>
           </div>
         </div>
-        {/* <div className="flex justify-center mb-20 mt-5">
+        <div className="flex justify-center mb-20 mt-5">
                     <SocialIcons></SocialIcons>
-                  </div> */}
+                  </div>
         </section>
     );
 };

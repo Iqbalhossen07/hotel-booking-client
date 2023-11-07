@@ -33,6 +33,7 @@ const AddBookings = () => {
     })
         .then((res) => res.json())
         .then((data) => {
+          
             if (data.insertedId) {
                 toast.success("Added Booking successfully");
             } else {

@@ -36,8 +36,8 @@ const ShowReview = () => {
  },[Price_per_night,reviews])
 
     return (
-        <section>
-         <div>
+        <section >
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
          {
              filterData.length > 0 ?   filterData.map(review=> <ReviewCard key={review._id} review={review}></ReviewCard>) : 
              <div>

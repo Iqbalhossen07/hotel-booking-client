@@ -1,4 +1,4 @@
-
+import Footer from "../../Footer/Footer";
 import {  useEffect, useState } from "react";
 import RoomCard from "./RoomCard";
 // import useAxiosSecure from "../hooks/useAxiosSecure";
@@ -48,12 +48,13 @@ const Rooms = () => {
 
     return (
         <section className="mt-20">
-            <h2 className="text-5xl font-semibold text-center">Our Rooms</h2>
+           <div>
+           <h2 className="text-base md:text-3xl lg:text-4xl font-semibold text-center text-[#26917C]">Our Rooms</h2>
             
 
             <div className="flex justify-between mb-2">
                 <button
-                    className="text-blue-500 hover:underline"
+                    className="text-[#26917C] text-base md:text-2xl lg:text-3xl hover:underline"
                     onClick={toggleSortOrder}
                 >
                     Sort by Price {sortOrder === "ascending" ? "Ascending" : "Descending"}
@@ -65,6 +66,10 @@ const Rooms = () => {
                     <RoomCard key={room.id} room={room}></RoomCard>
                 ))}
             </div>
+           </div>
+           <div>
+            <Footer></Footer>
+           </div>
         </section>
     );
 };

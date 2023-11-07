@@ -43,7 +43,7 @@ const UserTestimonials = () => {
     return (
         <>
         <div>
-          <h2 className='text-center text-4xl font-semibold'>Our Client Says</h2>
+          <h2 className='text-center text-4xl font-semibold text-[#26917C]'>Our Client Says</h2>
         </div>
         <Swiper
           style={{
@@ -69,7 +69,7 @@ const UserTestimonials = () => {
     }}
     data-swiper-parallax="-23%"
   ></div>
-  <div className="title" data-swiper-parallax="-300" data-aos = "fade-down">
+  <div className="title " data-swiper-parallax="-300" data-aos = "fade-down">
   Sajid Ahmed
   </div>
   <div className="subtitle" data-swiper-parallax="-200">

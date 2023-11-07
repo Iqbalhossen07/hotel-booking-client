@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 const About = () => {
     return (
         <section>
@@ -12,8 +13,8 @@ const About = () => {
           
           </div>
           <div className='lg:w-1/2'>
-            <h1 className="text-4xl font-semibold">About Us</h1>
-            <p className="py-6 text-justify">
+            <h1 className="text-4xl font-semibold text-[#26917C]">About Us</h1>
+            <p className="py-6 text-justify text-[#706F6F]">
             Our hotel provides the best service here, due to which we are popular among all. Those of us who come here once, come again later. We try our best to provide the best service to a client. <br /> <br />
 
             In a glass-and-brick building in a residential neighbourhood,
@@ -22,11 +23,12 @@ const About = () => {
             Dining options include a cafe and an international restaurant. Parking, Wi-Fi and airport transfers are available.
 </p>
             <Link to='/rooms'>
-            <button className="btn btn-primary">Book Now</button>
+            <button className="btn btn-primary bg-[#26917C] hover:bg-[#26917C] border-none">Book Now</button>
             </Link>
           </div>
         </div>
       </div>
+      
         </section>
     );
 };

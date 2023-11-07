@@ -4,9 +4,10 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import swal from "sweetalert";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import axios from "axios";
 import useAxiosSecure from "../hooks/useAxiosSecure";
+import Footer from "../../Footer/Footer";
 
 const MyBookings = () => {
   const { stateChanged } = useContext(AuthContext);
@@ -113,7 +114,7 @@ const MyBookings = () => {
                 <td onClick={() => deleteButton(booking._id, booking.date)} className="text-2xl text-[#F87272]">
                   Delete
                 </td>
-
+               
                 <Link to={`/updateBooking/${booking._id}`}>
                   <td>Edit</td>
                 </Link>
@@ -121,6 +122,10 @@ const MyBookings = () => {
             ))}
           </tbody>
         </table>
+      </div>
+
+      <div className=" ">
+        <Footer></Footer>
       </div>
     </section>
   );

@@ -25,14 +25,14 @@ const SignUp = () => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <h1 className="mb-5 text-5xl font-bold text-[#26917C]">Please Subscribe</h1>
             <form>
-              <header className="footer-title">Newsletter</header>
+              {/* <header className="footer-title">Newsletter</header> */}
               <fieldset className="form-control w-80">
                 <div className="relative">
-                  <input type="text" required placeholder="username@site.com" className="input input-bordered w-full pr-16" />
+                  <input type="text"  placeholder="username@site.com" className="input input-bordered w-full pr-16" />
                  <Link to='/'>
-                  <button className="btn btn-primary absolute top-0 right-0 rounded-l-none" onClick={handleSubscribeClick}>
+                  <button className="btn btn-primary bg-[#26917C] hover:bg-[#26917C] border-none absolute top-0 right-0 rounded-l-none" onClick={handleSubscribeClick}>
                     Subscribe
                   </button>
                  </Link>
