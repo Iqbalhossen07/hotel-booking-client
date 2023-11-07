@@ -1,6 +1,7 @@
 
 
-
+import { BiEdit } from 'react-icons/bi';
+import { RiDeleteBin2Fill } from 'react-icons/ri';
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import swal from "sweetalert";
@@ -86,8 +87,8 @@ const MyBookings = () => {
               <th>Date</th>
               <th>Add Review</th>
               <th>Show Review</th>
+              <th>Edit</th>
               <th>Delete</th>
-              <th>EDIT</th>
             </tr>
           </thead>
           <tbody>
@@ -105,26 +106,35 @@ const MyBookings = () => {
                 </td>
                 <td>${booking.Price_per_night}</td>
                 <td>${booking.date}</td>
-                <Link to={`/addReview/${booking._id}`}>
+                <td>  <Link to={`/addReview/${booking._id}`}>
                   <td>Add Review</td>
-                </Link>
-                <Link to={`/showReview/${booking._id}`}>
+                </Link></td>
+                <td>  <Link to={`/showReview/${booking._id}`}>
+                  <td>Show Review</td>
+                </Link></td>
+                <td>  <Link to={`/updateBooking/${booking._id}`}>
+                  <td className='text-2xl'><BiEdit></BiEdit></td>
+                </Link></td>
+              
+                {/* <Link to={`/showReview/${booking._id}`}>
                   <td>Show Review</td>
                 </Link>
-                <td onClick={() => deleteButton(booking._id, booking.date)} className="text-2xl text-[#F87272]">
-                  Delete
-                </td>
+                
                
                 <Link to={`/updateBooking/${booking._id}`}>
                   <td>Edit</td>
-                </Link>
+                </Link> */}
+
+                <td onClick={() => deleteButton(booking._id, booking.date)} className="text-2xl text-[#F87272]">
+                  <RiDeleteBin2Fill></RiDeleteBin2Fill>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      <div className=" ">
+      <div className="">
         <Footer></Footer>
       </div>
     </section>
