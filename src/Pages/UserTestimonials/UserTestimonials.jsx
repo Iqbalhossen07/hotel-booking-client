@@ -23,7 +23,9 @@ import './style.css';
 // import slider3 from '../../assets/slider3.jpg'
 // import Aos from 'aos';
 // import 'aos/dist/aos.css'
-import slider1 from '../../assets/testimonial-edward.png'
+import slider1 from '../../assets/testimonial1.jpg'
+import slider2 from '../../assets/testimonial2.jpg'
+import slider3 from '../../assets/testimonial3.png'
 
 // import required modules
 import { Parallax, Pagination, Navigation } from 'swiper/modules';
@@ -40,6 +42,9 @@ const UserTestimonials = () => {
 
     return (
         <>
+        <div>
+          <h2 className='text-center text-4xl font-semibold'>Our Client Says</h2>
+        </div>
         <Swiper
           style={{
             '--swiper-navigation-color': '#fff',
@@ -54,70 +59,30 @@ const UserTestimonials = () => {
           modules={[Parallax, Pagination, Navigation]}
           className="mySwiper"
         >
-  
+
 <SwiperSlide>
-  <div
+<div
     slot="container-start"
     className="parallax-bg"
     style={{
-      'background-image': `url('<img src="https://i.ibb.co/5rgfr5z/vivo13.jpg" />')`,
-    }}
-    data-swiper-parallax="-23%"
-  ></div>
-  <div className="title text-white" data-swiper-parallax="-300" data-aos = "fade-down">
-  Buy any product with 20% discount. 
-  </div>
-  <div className="subtitle" data-swiper-parallax="-200">
-  
-  </div>
-  <div className="text text-white" data-swiper-parallax="-100" data-aos = "fade-up">
-  This offer will be allocated for a certain period, but why delay, come now to your desired shop.
-  </div>
-</SwiperSlide>
-<SwiperSlide>
-  <div
-    slot="container-start"
-    className="parallax-bg"
-    style={{
-      'background-image': `url('<img src="https://i.ibb.co/5rgfr5z/vivo13.jpg" />')`,
+      'background-image': `url(https://i.ibb.co/zhTX2Gf/pexels-pok-rie-1746589.jpg)`,
     }}
     data-swiper-parallax="-23%"
   ></div>
   <div className="title" data-swiper-parallax="-300" data-aos = "fade-down">
- 
+  Sajid Ahmed
   </div>
   <div className="subtitle" data-swiper-parallax="-200">
   <div className="avatar">
-  <div className="w-96 rounded-full "
+  <div className="w-24 rounded-full "
    style={{
     'background-image': `url(${slider1})`,
   }}
   >
  
-    {/* <img src="https://i.ibb.co/5rgfr5z/vivo13.jpg" /> */}
-  </div>
-</div>
    
   </div>
-  <div className="text" data-swiper-parallax="-100" data-aos = "fade-up">
-  {/* This offer will be allocated for a certain period, but why delay, come now to your desired shop.
-   */}
-   <img src="https://i.ibb.co/5rgfr5z/vivo13.jpg" alt="" />
-  </div>
-</SwiperSlide>
-<SwiperSlide>
-  <div
-    slot="container-start"
-    className="parallax-bg"
-    style={{
-      'background-image': `url(https://i.ibb.co/5rgfr5z/vivo13.jpg)`,
-    }}
-    data-swiper-parallax="-23%"
-  ></div>
-  <div className="title" data-swiper-parallax="-300" data-aos = "fade-down">
-  Buy any product with 20% discount. 
-  </div>
-  <div className="subtitle" data-swiper-parallax="-200">
+</div>
   
   </div>
   <div className="text" data-swiper-parallax="-100" data-aos = "fade-up">
@@ -125,6 +90,67 @@ const UserTestimonials = () => {
     {/* Your content for Slide 3 */}
   </div>
 </SwiperSlide>
+<SwiperSlide>
+  <div
+    slot="container-start"
+    className="parallax-bg"
+    style={{
+      'background-image': `url(https://i.ibb.co/LYQ4jf6/pexels-adriaan-greyling-751268.jpg)`,
+    }}
+    data-swiper-parallax="-23%"
+  ></div>
+  <div className="title" data-swiper-parallax="-300" data-aos = "fade-down">
+  Amir Ahmed
+  </div>
+  <div className="subtitle" data-swiper-parallax="-200">
+  <div className="avatar">
+  <div className="w-24 rounded-full "
+   style={{
+    'background-image': `url(${slider2})`,
+  }}
+  >
+ 
+   
+  </div>
+</div>
+  
+  </div>
+  <div className="text" data-swiper-parallax="-100" data-aos = "fade-up">
+  This offer will be allocated for a certain period, but why delay, come now to your desired shop.
+    {/* Your content for Slide 3 */}
+  </div>
+</SwiperSlide>
+<SwiperSlide>
+  <div
+    slot="container-start"
+    className="parallax-bg"
+    style={{
+      'background-image': `url(https://i.ibb.co/hmfPB3k/pexels-oliver-sj-str-m-1078981.jpg)`,
+    }}
+    data-swiper-parallax="-23%"
+  ></div>
+  <div className="title" data-swiper-parallax="-300" data-aos = "fade-down">
+  Masum Bhuiya 
+  </div>
+  <div className="subtitle" data-swiper-parallax="-200">
+  <div className="avatar">
+  <div className="w-24 rounded-full "
+   style={{
+    'background-image': `url(${slider3})`,
+  }}
+  >
+ 
+   
+  </div>
+</div>
+  
+  </div>
+  <div className="text" data-swiper-parallax="-100" data-aos = "fade-up">
+  This offer will be allocated for a certain period, but why delay, come now to your desired shop.
+    {/* Your content for Slide 3 */}
+  </div>
+</SwiperSlide>
+
 
         </Swiper>
       </>

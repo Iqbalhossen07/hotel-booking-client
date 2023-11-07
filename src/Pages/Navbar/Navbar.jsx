@@ -103,7 +103,7 @@ const Navbar = () => {
 
  {
   
-  stateChanged ? <button onClick={logOutButton} className="hidden md:btn md:btn-error">Logout</button> :
+  stateChanged ? <button onClick={logOutButton} className="hidden  md:btn md:btn-error">Logout</button> :
   <NavLink to="/login">
     <button  className="btn btn-outline  ">Login</button>
     
