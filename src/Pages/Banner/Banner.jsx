@@ -6,7 +6,7 @@ const Banner = () => {
             {/* style={{backgroundImage: 'url(https://i.ibb.co/gSNK8Ft/banner.jpg)'}} */}
             <div className="hero min-h-screen" >
           
-                        <div className="hero-overlay bg-opacity-60"></div>
+                        <div className="hero-overlay bg-opacity-40"></div>
                         <video controls autoPlay className='object-cover w-full h-full' width="100%" height="auto">
                                 <source src={banner} type="video/mp4" />
                             

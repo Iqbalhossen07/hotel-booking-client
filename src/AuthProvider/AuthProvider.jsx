@@ -25,47 +25,26 @@ const AuthProvider = ({children}) => {
 
    
 
-    // useEffect(()=>{
-    //     const unSubscribe = onAuthStateChanged(auth,user=>{
-    //         setLoading(false)
-    //         // console.log('current User', user)
+    useEffect(()=>{
+        const unSubscribe = onAuthStateChanged(auth,user=>{
+            setLoading(false)
+            // console.log('current User', user)
             
-    //         if(user){
-    //             axios.post('http://localhost:5000/jwt',loggedUser,{withCredentials: true})
-    //         .then(res=>{
-    //           console.log(res.data)
-              
-    //         })
-    //           }
-    //          setStateChanged(user)
-    //     })
-    //     return ()=>{
-    //          unSubscribe()
-    //     }
-    // },[])
-    useEffect(() => {
-        const unSubscribe = onAuthStateChanged(auth, user => {
-            setLoading(false);
-            // console.log('current User', user);
-            if (user) {
+            if(user){
                 const loggedUser = { email: user?.email };
-                axios
-                    .post('http://localhost:5000/jwt', loggedUser)
-                    .then(res => {
-                        console.log(res.data);
-                       
-                    })
-                    .catch(error => {
-                        console.error("Error while making POST request to /jwt", error);
-                    });
-            }
-            setStateChanged(user);
-        });
-    
-        return () => {
-            unSubscribe();
+                axios.post('http://localhost:5000/jwt',loggedUser,{withCredentials:true})
+            .then(res=>{
+              console.log(res.data)
+              
+            })
+              }
+             setStateChanged(user)
+        })
+        return ()=>{
+             unSubscribe()
         }
-    }, []);
+    },[])
+ 
     
 
     const logOut = ()=>{
