@@ -1,14 +1,23 @@
-import banner from '../../assets/banner.jpg'
+import { Link } from 'react-router-dom';
+import banner from '../../assets/video.mp4'
 const Banner = () => {
     return (
         <section>
-            <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/gSNK8Ft/banner.jpg)'}}>
-                <div className="hero-overlay bg-opacity-60"></div>
+            {/* style={{backgroundImage: 'url(https://i.ibb.co/gSNK8Ft/banner.jpg)'}} */}
+            <div className="hero min-h-screen" >
+          
+                        <div className="hero-overlay bg-opacity-60"></div>
+                        <video controls autoPlay className='object-cover w-full h-full' width="100%" height="auto">
+                                <source src={banner} type="video/mp4" />
+                            
+                            </video>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
                     <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button className="btn btn-primary">Get Started</button>
+                   <Link to='/rooms'>
+                   <button className="btn btn-primary">Book Now</button>
+                   </Link>
                     </div>
                 </div>
                 </div>

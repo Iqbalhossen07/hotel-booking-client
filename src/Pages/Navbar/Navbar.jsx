@@ -30,10 +30,11 @@ const Navbar = () => {
     })
   }
     const links =  
-  <div className="flex gap-2 text-base flex-col  lg:flex-row ">
+  <div className="flex items-start justify-center gap-2 text-base flex-col  lg:flex-row ">
   <NavLink to="/"><li>Home</li></NavLink>
   <NavLink to="/rooms">Rooms<li></li></NavLink>
   <NavLink to="/myBookings"><li>My Bookings</li></NavLink>
+ 
 
 
   
@@ -69,7 +70,7 @@ const Navbar = () => {
     
     stateChanged && stateChanged?.photoURL ? (
     <>
-      <p>{stateChanged?.displayName}</p>
+      {/* <p>{stateChanged?.displayName}</p> */}
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img src={stateChanged.photoURL} alt="User Avatar" />
@@ -98,7 +99,10 @@ const Navbar = () => {
       </ul>
  </div>
  <ToastContainer />
+ <NavLink to="/rooms"><button className="btn btn-outline mr-2">Book Now</button></NavLink>
+
  {
+  
   stateChanged ? <button onClick={logOutButton} className="hidden md:btn md:btn-error">Logout</button> :
   <NavLink to="/login">
     <button  className="btn btn-outline  ">Login</button>
