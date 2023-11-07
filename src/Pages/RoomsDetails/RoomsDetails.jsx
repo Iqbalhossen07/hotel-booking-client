@@ -5,12 +5,14 @@ import axios from "axios";
 
 const RoomsDetails = () => {
     const loaderData = useLoaderData()
+    console.log(loaderData)
     const {_id,Room_Description,Price_per_night,Room_size,image,Special_offers} = loaderData;
+    
 
 
  // State to track whether booking has been added
  const [bookingAdded, setBookingAdded] = useState(false);
- const [bookingStatus, setBookingStatus] = useState(false);
+//  const [bookingStatus, setBookingStatus] = useState(false);
  const [bookingExists, setBookingExists] = useState(false);
 
  useEffect(() => {

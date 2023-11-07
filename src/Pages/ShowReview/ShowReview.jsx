@@ -2,9 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import ReviewCard from "./ReviewCard";
 import { useLoaderData } from "react-router-dom";
+// import useAxiosSecure from "../hooks/useAxiosSecure";
 
 
 const ShowReview = () => {
+  // const axiosSecure = useAxiosSecure()
    const loader = useLoaderData()
    const {Price_per_night} = loader;
 //    console.log(Price_per_night)
@@ -17,10 +19,16 @@ const ShowReview = () => {
 
    
   useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setReviews(data));
-  }, [url]);
+  fetch(url)
+  .then((res) => res.json())
+  .then((data) => setReviews(data));
+}, [url]);
+  // useEffect(()=>{
+  //   axiosSecure.get(url)
+  // .then(res=>{
+  //   setReviews(res.data)
+  // })
+  // },[url,axiosSecure])
 
  useEffect(()=>{
     const filterData = reviews.filter(review=> review.Price_per_night == Price_per_night)

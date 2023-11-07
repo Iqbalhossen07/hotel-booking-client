@@ -1,16 +1,36 @@
 
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import RoomCard from "./RoomCard";
+// import useAxiosSecure from "../hooks/useAxiosSecure";
+// import { AuthContext } from "../../AuthProvider/AuthProvider";
+
 
 const Rooms = () => {
+    //   const axiosSecure = useAxiosSecure()
     const [rooms, setRooms] = useState([]);
+    // console.log(rooms)
     const [sortOrder, setSortOrder] = useState("ascending");
+    // const { stateChanged } = useContext(AuthContext);
 
     useEffect(() => {
+      
         fetch('http://localhost:5000/bookings')
             .then(res => res.json())
-            .then(data => setRooms(data))
+            .then(data => {
+                if(data.message){
+                    alert(data.message)
+                    return 
+                } setRooms(data)})
     }, []);
+  
+// const url = `/bookings/?email=${stateChanged?.email}`
+//     useEffect(()=>{
+//         axiosSecure.get(url)
+//       .then(res=>{
+//         setRooms(res.data)
+//       })
+//       },[url,axiosSecure])
+   
 
     const toggleSortOrder = () => {
         setSortOrder(sortOrder === "ascending" ? "descending" : "ascending");

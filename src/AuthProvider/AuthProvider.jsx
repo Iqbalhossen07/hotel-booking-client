@@ -25,20 +25,45 @@ const AuthProvider = ({children}) => {
 
    
 
+    // useEffect(()=>{
+    //     const unSubscribe = onAuthStateChanged(auth,user=>{
+    //         setLoading(false)
+    //         // console.log('current User', user)
+            
+    //         if(user){
+    //             const loggedUser = { email: user?.email };
+    //             axios.post('http://localhost:5000/jwt',loggedUser,{withCredentials:true})
+    //         .then(res=>{
+    //           console.log(res.data)
+              
+    //         })
+    //           }
+    //          setStateChanged(user)
+    //     })
+    //     return ()=>{
+    //          unSubscribe()
+    //     }
+    // },[])
     useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth,user=>{
             setLoading(false)
-            // console.log('current User', user)
-            
+            const loggedEmail = user?.email || stateChanged?.email;
+            console.log('current User', user)
+            const loggedUser = {email: loggedEmail}
             if(user){
-                const loggedUser = { email: user?.email };
-                axios.post('http://localhost:5000/jwt',loggedUser,{withCredentials:true})
-            .then(res=>{
-              console.log(res.data)
-              
-            })
-              }
-             setStateChanged(user)
+            axios.post('http://localhost:5000/jwt',loggedUser,{withCredentials:true})
+           .then(res=>{
+            console.log(res.data)
+            
+          })
+            }
+            else{
+                axios.post('http://localhost:5000/logout',loggedUser,{withCredentials:true})
+                .then(res=>{
+                    console.log(res.data)
+                })
+            }
+            setStateChanged(user)
         })
         return ()=>{
              unSubscribe()
