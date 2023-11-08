@@ -47,7 +47,7 @@ const Rooms = () => {
     });
 
     return (
-        <section className="mt-20">
+        <section className="mt-20 ">
            <div>
            <h2 className="text-base md:text-3xl lg:text-4xl font-semibold text-center text-[#26917C]">Our Rooms</h2>
             
@@ -67,7 +67,7 @@ const Rooms = () => {
                 ))}
             </div>
            </div>
-           <div>
+           <div className="mt-20">
             <Footer></Footer>
            </div>
         </section>

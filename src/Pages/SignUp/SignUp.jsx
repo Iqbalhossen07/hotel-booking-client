@@ -21,6 +21,10 @@ const SignUp = () => {
     };
   
     return (
+    <section>
+        <div>
+      <h2 className='text-center text-base md:text-3xl lg:text-4xl font-semibold text-[#26917C] mb-10'>Newsletter Signup</h2>
+    </div>
       <div className="hero h-[500px]" style={{ backgroundImage: 'url(https://i.ibb.co/LYQ4jf6/pexels-adriaan-greyling-751268.jpg)' }}>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
@@ -52,6 +56,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
+    </section>
     );
   };
   

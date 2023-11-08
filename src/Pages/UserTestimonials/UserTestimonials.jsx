@@ -43,7 +43,7 @@ const UserTestimonials = () => {
     return (
         <>
         <div>
-          <h2 className='text-center text-4xl font-semibold text-[#26917C]'>Our Client Says</h2>
+          <h2 className='text-center text-base md:text-3xl lg:text-4xl font-semibold text-[#26917C]'>Our Client Says</h2>
         </div>
         <Swiper
           style={{

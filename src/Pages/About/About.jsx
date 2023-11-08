@@ -13,7 +13,7 @@ const About = () => {
           
           </div>
           <div className='lg:w-1/2'>
-            <h1 className="text-4xl font-semibold text-[#26917C]">About Us</h1>
+            <h1 className="text-base md:text-3xl lg:text-4xl font-semibold text-[#26917C]">About Us</h1>
             <p className="py-6 text-justify text-[#706F6F]">
             Our hotel provides the best service here, due to which we are popular among all. Those of us who come here once, come again later. We try our best to provide the best service to a client. <br /> <br />
 

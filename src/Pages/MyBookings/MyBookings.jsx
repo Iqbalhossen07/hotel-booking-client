@@ -127,7 +127,7 @@ const MyBookings = () => {
         </table>
       </div>
 
-      <div className="">
+      <div className="mt-20">
         <Footer></Footer>
       </div>
     </section>
