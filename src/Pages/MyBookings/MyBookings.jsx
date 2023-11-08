@@ -16,7 +16,7 @@ const MyBookings = () => {
   const [bookingsData, setBookingsData] = useState([]);
   const axiosSecure = useAxiosSecure()
   // console.log(bookingsData);
-  const url = `/hotelBookings/?email=${stateChanged?.email}`;
+  const url = `/hotelBookings?email=${stateChanged?.email}`;
 
   // useEffect(() => {
   //   fetch(url)
@@ -38,7 +38,7 @@ const MyBookings = () => {
     .then(res=>{
       setBookingsData(res.data)
     })
-    },[url,axiosSecure])
+    },[url,axiosSecure,stateChanged.email])
 
   const deleteButton = (id, date) => {
     console.log('hitting', id);
@@ -98,7 +98,7 @@ const MyBookings = () => {
             </tr>
           </thead>
           <tbody>
-            {bookingsData.map((booking) => (
+            {bookingsData && bookingsData.map((booking) => (
               <tr key={booking._id}>
                 <td className="text-[#3ED39A]">{booking.displayName}</td>
                 <td>

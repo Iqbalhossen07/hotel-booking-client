@@ -22,7 +22,7 @@ const ErrorPage = () => {
                   type="button"
                   data-ripple-light="true"
                 >
-                  Go Back
+                 Back to home
                 </button>
               </div>
               </Link>

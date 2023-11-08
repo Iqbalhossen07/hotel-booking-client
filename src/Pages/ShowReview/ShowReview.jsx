@@ -8,14 +8,17 @@ import useAxiosSecure from "../hooks/useAxiosSecure";
 const ShowReview = () => {
   const axiosSecure = useAxiosSecure()
    const loader = useLoaderData()
+  //  console.log(loader)
    const {Price_per_night} = loader;
-//    console.log(Price_per_night)
+   console.log(Price_per_night)
  
     const { stateChanged } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
     const [filterData,setFilterData] = useState([])
     console.log(filterData)
-    const url = `/reviewBooking/?email=${stateChanged?.email}`;
+    const url = `/reviewBooking?email=${stateChanged?.email}`;
+    // console.log(url)
+    console.log(reviews)
 
    
 //   useEffect(() => {
