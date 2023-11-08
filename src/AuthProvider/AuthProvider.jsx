@@ -32,7 +32,7 @@ const AuthProvider = ({children}) => {
             
     //         if(user){
     //             const loggedUser = { email: user?.email };
-    //             axios.post('http://localhost:5000/jwt',loggedUser,{withCredentials:true})
+    //             axios.post('https://hotel-booking-server-xi.vercel.app/jwt',loggedUser,{withCredentials:true})
     //         .then(res=>{
     //           console.log(res.data)
               
@@ -51,14 +51,14 @@ const AuthProvider = ({children}) => {
             console.log('current User', user)
             const loggedUser = {email: loggedEmail}
             if(user){
-            axios.post('http://localhost:5000/jwt',loggedUser,{withCredentials:true})
+            axios.post('https://hotel-booking-server-xi.vercel.app/jwt',loggedUser,{withCredentials:true})
            .then(res=>{
             console.log(res.data)
             
           })
             }
             else{
-                axios.post('http://localhost:5000/logout',loggedUser,{withCredentials:true})
+                axios.post('https://hotel-booking-server-xi.vercel.app/logout',loggedUser,{withCredentials:true})
                 .then(res=>{
                     console.log(res.data)
                 })

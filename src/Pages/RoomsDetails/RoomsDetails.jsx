@@ -203,7 +203,9 @@ const RoomsDetails = () => {
   </div>
 </div>
 
+<div className="mt-20">
 <ShowReview></ShowReview>
+</div>
       </section>
     );
 };

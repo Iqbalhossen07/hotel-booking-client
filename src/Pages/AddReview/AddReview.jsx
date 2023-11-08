@@ -9,20 +9,24 @@ const AddReview = () => {
     console.log(loader)
     const {stateChanged} = useContext(AuthContext)
     // console.log(loader)
+    
+    // console.log(new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" }));
+//     const dhakaTime = new Date().toLocaleTimeString("en-US", { timeZone: "Asia/Dhaka" });
+// console.log(dhakaTime);
+
 
     const addReview = e=>{
         e.preventDefault()
         const form = e.target;
         const displayName = stateChanged?.displayName;
         const rating = form.rating.value;
-        // const date = new Date().toISOString(); // Get the current timestamp
         const date = new Date().toLocaleString("en-US", { timeZone: "Asia/Dhaka" });
         const comment = form.comment.value;
-        const bookings = {displayName,rating,date,comment,Price_per_night}
+        const bookings = {displayName,rating,date,comment,Price_per_night,stateChanged:stateChanged.email}
 
-        console.log(displayName,rating,date,comment)
+        console.log(displayName,rating,date,comment,stateChanged.email)
         
-        fetch('http://localhost:5000/reviewBooking',{
+        fetch('https://hotel-booking-server-xi.vercel.app/reviewBooking',{
             method: "POST",
                  headers: {
                      "Content-Type": "application/json",
@@ -32,7 +36,7 @@ const AddReview = () => {
              .then(res=>res.json())
              .then(data=>{
                 if(data.insertedId){
-                    toast.success("Added Booking successfully");
+                    toast.success("Added Review successfully");
                     console.log(data)
                 }
              })
@@ -58,17 +62,27 @@ const AddReview = () => {
            </div>
 
 
-          <div className="form-control md:w-1/2">
+          {/* <div className="form-control md:w-1/2">
            <label className="label">
                <span className="label-text"> Timestamp </span>
            </label>
            <input type="date" id="timestamp" name="date" className="input input-bordered w-full" />
 
+           </div> */}
+
+            <div className="form-control md:w-1/2">
+           <label className="label">
+               <span className="label-text"> Rating</span>
+           </label>
+           <label className="input-group">
+             
+               <input type="text"  required placeholder="Enter the  Rating" name="rating" className="input input-bordered w-full" />
+           </label>
            </div>
        </div>
         {/* second */}
        <div className="flex flex-col md:flex-row gap-6 ">
-          <div className="form-control md:w-1/2">
+          {/* <div className="form-control md:w-1/2">
            <label className="label">
                <span className="label-text"> Rating</span>
            </label>
@@ -76,14 +90,14 @@ const AddReview = () => {
              
                <input type="text"  placeholder="Enter the  Rating" name="rating" className="input input-bordered w-full" />
            </label>
-           </div>
+           </div> */}
 
 
           <div className="form-control md:w-1/2">
            <label className="label">
                <span className="label-text"> Comment </span>
            </label>
-           <textarea placeholder="Comment" name="comment" className="textarea textarea-bordered textarea-lg w-full " ></textarea>
+           <textarea required placeholder="Comment" name="comment" className="textarea textarea-bordered textarea-lg w-full " ></textarea>
            </div>
        </div>
       

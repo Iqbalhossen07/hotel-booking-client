@@ -24,7 +24,7 @@ const AddBookings = () => {
         setBookingSummary(bookings);
 
     
-    fetch("http://localhost:5000/hotelBookings", {
+    fetch("https://hotel-booking-server-xi.vercel.app/hotelBookings", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

@@ -46,40 +46,41 @@ const router = createBrowserRouter([
             {
                 path: "/roomsDetails/:id",
                 element: <RoomsDetails></RoomsDetails>,
-                loader: ({params})=> fetch(`http://localhost:5000/bookings/${params.id}`)
+                loader: ({params})=> fetch(`https://hotel-booking-server-xi.vercel.app/bookings/${params.id}`)
             },
             {
                 path: "/addBookings/:id",
                 element: <PrivateRoute><AddBookings></AddBookings></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/bookings/${params.id}`)
+                loader: ({params})=> fetch(`https://hotel-booking-server-xi.vercel.app/bookings/${params.id}`)
             },
             {
                 path: "/updateBooking/:id",
                 element: <PrivateRoute><UpdateBookings></UpdateBookings></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/hotelBookings/${params.id}`)
+                loader: ({params})=> fetch(`https://hotel-booking-server-xi.vercel.app/hotelBookings/${params.id}`)
                 
             },
             {
                 path: "/addReview/:id",
                 element: <PrivateRoute><AddReview></AddReview></PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:5000/hotelBookings/${params.id}`)
+                loader: ({params})=> fetch(`https://hotel-booking-server-xi.vercel.app/hotelBookings/${params.id}`)
             },
             {
                 path: "/showReview/:id",
                 element: <ShowReview></ShowReview>,
-                loader: ({params})=> fetch(`http://localhost:5000/hotelBookings/${params.id}`)
+                loader: ({params})=> fetch(`https://hotel-booking-server-xi.vercel.app/hotelBookings/${params.id}`)
                 
-              }
+              },
+              {
+                path: "/login",
+                element: <Login></Login>,
+            },
+            {
+                path: "/register",
+                element: <Register></Register>,
+            }
         ]
     },
-    {
-        path: "/login",
-        element: <Login></Login>,
-    },
-    {
-        path: "/register",
-        element: <Register></Register>,
-    },
+    
 ])
 
 export default router;

@@ -1,10 +1,16 @@
 import ContactAccordion from "../ContactAccordion/ContactAccordion";
 import ContactAddress from "../ContactAddress/ContactAddress";
 import Footer from "../../Footer/Footer";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
     return (
         <section>
+             <Helmet>
+                <title>
+                    Hotel || Contact
+                </title>
+            </Helmet>
            <div>
            <ContactAddress></ContactAddress>
            </div>

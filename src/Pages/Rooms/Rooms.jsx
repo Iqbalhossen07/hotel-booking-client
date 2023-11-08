@@ -3,6 +3,7 @@ import {  useEffect, useState } from "react";
 import RoomCard from "./RoomCard";
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { Helmet } from "react-helmet-async";
 // import useAxiosSecure from "../hooks/useAxiosSecure";
 // import { AuthContext } from "../../AuthProvider/AuthProvider";
 
@@ -24,7 +25,7 @@ const Rooms = () => {
 
     useEffect(() => {
       
-        fetch('http://localhost:5000/bookings')
+        fetch('https://hotel-booking-server-xi.vercel.app/bookings')
             .then(res => res.json())
             .then(data => {
                 if(data.message){
@@ -58,6 +59,11 @@ const Rooms = () => {
 
     return (
         <section className="mt-20 " data-aos="zoom-in">
+             <Helmet>
+                <title>
+                    Hotel || Rooms
+                </title>
+            </Helmet>
            <div>
            <h2 className="text-base md:text-3xl lg:text-4xl font-semibold text-center text-[#26917C]">Our Rooms</h2>
             

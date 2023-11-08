@@ -9,6 +9,7 @@ import { Link, NavLink } from "react-router-dom";
 import axios from "axios";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import Footer from "../../Footer/Footer";
+import { Helmet } from 'react-helmet-async';
 
 const MyBookings = () => {
   const { stateChanged } = useContext(AuthContext);
@@ -53,7 +54,7 @@ const MyBookings = () => {
         dangerMode: true,
       }).then((willDelete) => {
         if (willDelete) {
-          fetch(`http://localhost:5000/hotelBookings/${id}`, {
+          fetch(`https://hotel-booking-server-xi.vercel.app/hotelBookings/${id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())
@@ -77,6 +78,11 @@ const MyBookings = () => {
 
   return (
     <section>
+       <Helmet>
+                <title>
+                    Hotel || MyBookings
+                </title>
+            </Helmet>
       <div className="overflow-x-auto" data-aos="zoom-in">
         <table className="table">
           <thead>
