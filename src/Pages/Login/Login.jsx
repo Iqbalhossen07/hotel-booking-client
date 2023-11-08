@@ -5,7 +5,8 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import SocialIcons from "../SocialICons/SocialICons";
-// import SocialIcons from "../../SocialICons/SocialICons";
+
+
 
 const Login = () => {
   const location = useLocation()

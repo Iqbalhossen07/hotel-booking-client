@@ -21,8 +21,8 @@ import './style.css';
 // import slider1 from '../../assets/slider4.jpg'
 // import slider2 from '../../assets/slider1.jpg'
 // import slider3 from '../../assets/slider3.jpg'
-// import Aos from 'aos';
-// import 'aos/dist/aos.css'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 import slider1 from '../../assets/testimonial1.jpg'
 import slider2 from '../../assets/testimonial2.jpg'
 import slider3 from '../../assets/testimonial3.png'
@@ -31,18 +31,18 @@ import slider3 from '../../assets/testimonial3.png'
 import { Parallax, Pagination, Navigation } from 'swiper/modules';
 const UserTestimonials = () => {
 
-//   useEffect(()=>{
-//         Aos.init({
-//           duration: 1000, 
-//           easing: 'ease-in-out', 
-//           offset: 100, 
-//         })
-//       },[])
+  useEffect(()=>{
+        Aos.init({
+          duration: 1000, 
+          easing: 'ease-in-out', 
+          offset: 100, 
+        })
+      },[])
 
 
     return (
         <>
-        <div>
+        <div data-aos="zoom-in">
           <h2 className='text-center text-base md:text-3xl lg:text-4xl font-semibold text-[#26917C]'>Our Client Says</h2>
         </div>
         <Swiper
@@ -86,7 +86,7 @@ const UserTestimonials = () => {
   
   </div>
   <div className="text" data-swiper-parallax="-100" data-aos = "fade-up">
-  This offer will be allocated for a certain period, but why delay, come now to your desired shop.
+  Breakfast at the hotel: One of the best that we have experieced so far.
     {/* Your content for Slide 3 */}
   </div>
 </SwiperSlide>
@@ -116,7 +116,7 @@ const UserTestimonials = () => {
   
   </div>
   <div className="text" data-swiper-parallax="-100" data-aos = "fade-up">
-  This offer will be allocated for a certain period, but why delay, come now to your desired shop.
+  Location is very good. Stuff was very helpful. Service was good.
     {/* Your content for Slide 3 */}
   </div>
 </SwiperSlide>
@@ -146,7 +146,8 @@ const UserTestimonials = () => {
   
   </div>
   <div className="text" data-swiper-parallax="-100" data-aos = "fade-up">
-  This offer will be allocated for a certain period, but why delay, come now to your desired shop.
+  Positive section of review
+staff were great and food in the buffet was amazing
     {/* Your content for Slide 3 */}
   </div>
 </SwiperSlide>

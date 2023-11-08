@@ -1,19 +1,4 @@
 
-// const AboutTeam = () => {
-//     return (
-//         <div>
-            
-//         </div>
-//     );
-// };
-
-// export default AboutTeam;
-
-
-
-
-
-
 
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
@@ -24,17 +9,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import './style.css';
-// import featured1 from '../../assets/feutured1.jpg'
-// import featured2 from '../../assets/featured2.jpg'
-// import featured3 from '../../assets/featured3.jpg'
-// import featured6 from '../../assets/featured6.jpg'
-// import featured8 from '../../assets/featured8.jpg'
-// import featured9 from '../../assets/featured9.jpg'
-// import featured10 from '../../assets/featured10.jpg'
-// import featured11 from '../../assets/featured11.jpg'
-// import featured12 from '../../assets/featured12.webp'
-// import featured13 from '../../assets/featured13.webp'
-// import featured14 from '../../assets/featured14.png'
+
 
 
 // import required modules
@@ -47,7 +22,7 @@ const AboutTeam = () => {
     <div className='md:flex items-center gap-6'>
     <div className=' md:w-1/3 space-y-3' data-aos = "fade-right">
         <div className='flex justify-center'>
-        <h2 className='text-3xl md:text-3xl lg:text-4xl font-medium text-[#26917C] '> Meet Our Team</h2>
+        <h2 className='text-3xl md:text-3xl lg:text-4xl font-semibold text-[#26917C] '> Meet Our Team</h2>
         </div>
         <div className='flex justify-center'>
         <img src="" alt="" />

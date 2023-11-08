@@ -2,7 +2,9 @@
 
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
             
 
 
@@ -10,6 +12,13 @@ import { toast } from "react-toastify";
 
 
 const SignUp = () => {
+  useEffect(()=>{
+    Aos.init({
+      duration: 1000, 
+      easing: 'ease-in-out', 
+      offset: 100, 
+    })
+  },[])
 
   
     const handleSubscribeClick = () => {
@@ -21,7 +30,7 @@ const SignUp = () => {
     };
   
     return (
-    <section>
+    <section data-aos="zoom-in">
         <div>
       <h2 className='text-center text-base md:text-3xl lg:text-4xl font-semibold text-[#26917C] mb-10'>Newsletter Signup</h2>
     </div>

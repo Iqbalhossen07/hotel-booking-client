@@ -1,11 +1,21 @@
 import Footer from "../../Footer/Footer";
 import {  useEffect, useState } from "react";
 import RoomCard from "./RoomCard";
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 // import useAxiosSecure from "../hooks/useAxiosSecure";
 // import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
 const Rooms = () => {
+
+    useEffect(()=>{
+        Aos.init({
+          duration: 1000, 
+          easing: 'ease-in-out', 
+          offset: 100, 
+        })
+      },[])
     //   const axiosSecure = useAxiosSecure()
     const [rooms, setRooms] = useState([]);
     // console.log(rooms)
@@ -47,7 +57,7 @@ const Rooms = () => {
     });
 
     return (
-        <section className="mt-20 ">
+        <section className="mt-20 " data-aos="zoom-in">
            <div>
            <h2 className="text-base md:text-3xl lg:text-4xl font-semibold text-center text-[#26917C]">Our Rooms</h2>
             

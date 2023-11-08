@@ -1,17 +1,28 @@
+import { useEffect } from "react";
 import Footer from "../../Footer/Footer";
 import About from "../About/About";
 import AboutTeam from "../AbutTeam/AboutTeam";
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 
 const AboutPage = () => {
+
+  useEffect(()=>{
+    Aos.init({
+      duration: 1000, 
+      easing: 'ease-in-out', 
+      offset: 100, 
+    })
+  },[])
     return (
-        <section>
+        <section >
             {/* first section */}
             <div>
             <About></About>
         </div>
         {/* second section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" data-aos="zoom-in">
             {/* first card */}
             <div className="relative flex flex-col text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
   <div className="p-6">
