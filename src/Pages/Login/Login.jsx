@@ -28,7 +28,6 @@ const Login = () => {
           navigate(location?.state ? location.state : '/')
         })
         .catch(error=>{
-            // swal("Good job!", "Email Or Password do not match!", "error");
           toast.error("Email Or Password do not match")
                 
                 
