@@ -116,14 +116,7 @@ const MyBookings = () => {
                   <td className='text-2xl'><BiEdit></BiEdit></td>
                 </Link></td>
               
-                {/* <Link to={`/showReview/${booking._id}`}>
-                  <td>Show Review</td>
-                </Link>
                 
-               
-                <Link to={`/updateBooking/${booking._id}`}>
-                  <td>Edit</td>
-                </Link> */}
 
                 <td onClick={() => deleteButton(booking._id, booking.date)} className="text-2xl text-[#F87272]">
                   <RiDeleteBin2Fill></RiDeleteBin2Fill>
