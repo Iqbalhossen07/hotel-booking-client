@@ -10,7 +10,8 @@ const ErrorPage = () => {
               error.status = 404  && <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="p-6 text-center ">
                 <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                 {error.status = 'Not found page' }
+                 {/* {error.status = 'Not found page' } */}
+                 <img src="https://i.ibb.co/W3kGJw7/image.png" alt="" />
                 </h5>
                
               </div>
