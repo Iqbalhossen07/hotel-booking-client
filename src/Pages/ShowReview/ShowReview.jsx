@@ -10,13 +10,10 @@ const ShowReview = () => {
    const loader = useLoaderData()
   //  console.log(loader)
    const {Price_per_night} = loader;
-   console.log(Price_per_night)
- 
     const { stateChanged } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
     const [filterData,setFilterData] = useState([])
-    console.log(filterData)
-    const url = `/reviewBooking?email=${stateChanged?.email}`;
+    const url = `/reviewBooking?stateChanged=${stateChanged?.email}`;
     // console.log(url)
     console.log(reviews)
 

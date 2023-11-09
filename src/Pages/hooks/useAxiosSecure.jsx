@@ -14,7 +14,7 @@ const useAxiosSecure = () => {
     const {logOut} = useContext(AuthContext)
     useEffect(()=>{
         axiosSecure.interceptors.response.use( (response)=> {
-            console.log(response)
+            // console.log(response)
             return response;
           },  (error)=> {
            if(error.response.status === 401 || error.response.status === 403){

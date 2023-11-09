@@ -32,7 +32,7 @@ const SocialIcons = () => {
             </div>
             <div>
             <div className="w-80 md:w-96 h-12 flex items-center justify-center">
-                <button onClick={handleGoogleSignIn} className="w-full btn btn-outline hover:bg-[#54e2d2] hover:border-[#54e2d2] flex items-center">
+                <button onClick={handleGoogleSignIn} className="w-full btn btn-outline hover:bg-[#26917C] hover:border-[#26917C] flex items-center">
                     <AiOutlineGoogle className="mr-2 google-logo" /> 
                     Continue with Google
                 </button>

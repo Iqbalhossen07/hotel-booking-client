@@ -70,7 +70,7 @@ const router = createBrowserRouter([
                 loader: ({params})=> fetch(`https://hotel-booking-server-xi.vercel.app/hotelBookings/${params.id}`)
                 
               },
-              {
+            {
                 path: "/login",
                 element: <Login></Login>,
             },

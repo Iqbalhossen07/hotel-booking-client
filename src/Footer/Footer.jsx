@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
     return (
         <section>
-            <footer className="footer footer-center p-10 bg-neutral text-neutral-content rounded">
+            <footer className="footer  footer-center p-10 bg-neutral text-neutral-content rounded">
   <nav className="grid grid-flow-col gap-4">
   <NavLink to="/"><li className="list-none">Home</li></NavLink>
   <NavLink to="/about"><li className="list-none">About Us</li></NavLink>

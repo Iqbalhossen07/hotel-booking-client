@@ -38,7 +38,7 @@ const SignUp = () => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold text-[#26917C]">Please Subscribe</h1>
+            <h1 className="mb-5 text-xl md:text-3xl lg:text-4xl font-bold text-[#26917C]">Please Subscribe</h1>
             <form>
               {/* <header className="footer-title">Newsletter</header> */}
               <fieldset className="form-control w-80">

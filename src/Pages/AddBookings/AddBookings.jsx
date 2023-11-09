@@ -51,7 +51,7 @@ const AddBookings = () => {
         <section className="mt-20 ">
            
         {/* first  */}
-        <h2 className="text-center text-5xl font-semibold text-[#54e2d2] mb-3">Add Booking</h2>
+        <h2 className="text-center text-xl md:text-3xl lg:text-4xl font-semibold text-[#54e2d2] mb-3">Add Booking</h2>
      <form onSubmit={addProduct}>
      <div className="flex flex-col md:flex-row gap-6  ">
           <div className="form-control md:w-1/2">

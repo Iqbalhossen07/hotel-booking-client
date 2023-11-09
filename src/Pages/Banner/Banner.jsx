@@ -13,8 +13,8 @@ const Banner = () => {
                             </video>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold text-[#26917C]">40% Offers</h1>
-                    <p className="mb-5 md:text-xl lg:2xl ">40% discount on any room booking. So book your preferred room without delay.</p>
+                    <h1 className="mb-5 text-3xl md:text-4xl lg:text-5xl font-bold text-[#26917C]">40% Offers</h1>
+                    <p className="mb-5 md:text-xl lg:2xl">40% discount on any room booking. So book your preferred room without delay.</p>
                    <Link to='/rooms'>
                    <button className="btn btn-primary bg-[#26917C] hover:bg-[#26917C] border-none">Book Now</button>
                    </Link>
